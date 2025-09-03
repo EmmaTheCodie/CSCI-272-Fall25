@@ -1,16 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-  int scores [5] = {90,85,70,95,100}; //array of 5 elements 
-  int sum = 0;
 
-//loop through the array
-for (int i = 0; i < 5; i++) {
-  sum += scores [i];
+double average (int scores[], int size){
+    int sum = 0;
+    for (int i = 0; i < size; i++){
+        sum += scores[i];
+        
+    }
+    return (double) sum/size; 
 }
 
-cout << "Average = " << sum / 5 << endl;
+
+
+int main() {
+  int scores [5] = {90,85,70,95,100}; //array of 5 elements 
+
+cout << "Average = " << average(scores, 5) << endl;
 
 return 0;
 }
